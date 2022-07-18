@@ -1,0 +1,226 @@
+.page_template_text {
+    padding-bottom: 80px;
+    .text_content {
+        text-align: justify;
+        color: $gray;
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: bold;
+            color: $black;
+            margin: 50px 0 20px;
+        }
+        h2 {
+            font-size: 1.65em;
+        }
+        h3 {
+            font-size: 1.55em;
+        }
+        h4 {
+            font-size: 1.45em;
+        }
+        h5 {
+            font-size: 1.35em;
+        }
+        h6 {
+            font-size: 1.25em;
+        }
+    }
+
+    .content_contact {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        .column {
+            padding: 0;
+            margin-bottom: 50px;
+        }
+        h2 {
+            @extend .col-12;
+            margin-top: 50px;
+            color: $darkBlue;
+            margin-bottom: 10px;
+        }
+        p {
+            @extend .col-12;
+            color: $gray;
+        }
+        ul {
+            @extend .col-12;
+            margin-top: 50px;
+            color: $gray;
+            li {
+                margin-bottom: 15px;
+                a {
+                    text-decoration: none;
+                    @include anima-slow;
+                    color: #fff;
+                    &:hover {
+                      @include anima-slow;
+                      color: $blue;
+                    }
+                  }
+                svg {
+                    position: absolute;
+                    margin-top: 5px;
+                    width: 15px;
+                    height: 15px;
+                    path {
+                        fill: $blue;
+                    }
+                }
+
+                span {
+                    margin-left: 25px;
+                    text-align: justify;
+                }
+            }
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            .item_form {
+                @extend .col-12;
+                margin-bottom: 20px;
+                label {
+                    color: $gray;
+                }
+                .input_text {
+                    border: 1px solid #dbdbdb;
+                    padding: 8px 15px;
+                    outline: 0;
+                    font-family: "Open sans", sans-serif;
+                    resize: none;
+                    width: 100%;
+                }
+
+                .btnEnviar {
+                    width: 200px;
+                    background: $blue;
+                    border: 0;
+                    border-radius: 30px;
+                    cursor: pointer;
+                    outline: 0;
+                    color: #fff;
+                    font-weight: bold;
+                    padding: 10px 15px;
+                    @include anima-slow;
+                    &:hover {
+                        background: #00b548;
+                        @include anima-slow;
+                    }
+                }
+            }
+        }
+
+        .btns {
+            padding: 0;
+            ul {
+                li {
+                    a {
+                        svg {
+                            position: absolute;
+                            margin-left: -8px;
+                            margin-top: -4px;
+                            width: 30px;
+                            height: 30px;
+                            path {
+                                fill: #fff;
+                            }
+                        }
+
+                        span {
+                            margin-left: 30px;
+                        }
+                    }
+                }
+
+                .whatsapp {
+                    margin-top: 40px;
+                    a {
+                        padding: 10px 20px;
+                        border-radius: 30px;
+                        background: #10bd3d;
+                        @include anima-slow;
+                        &:hover {
+                            background: $yelllow;
+                            color: $darkBlue;
+                            @include anima-slow;
+                            svg {
+                                path {
+                                    @include anima-slow;
+                                    fill: $darkBlue;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .atendimento_online {
+                    margin-top: 30px;
+                    a {
+                        padding: 10px 20px;
+                        border-radius: 30px;
+                        background: $blue;
+                        @include anima-slow;
+                        svg {
+                            circle {
+                                fill: #fff !important;
+                            }
+                            g {
+                                circle {
+                                    fill: $blue !important;
+                                }
+                            }
+                        }
+                        &:hover {
+                            background: $yelllow;
+                            color: $darkBlue;
+                            @include anima-slow;
+                            svg {
+                                circle {
+                                    fill: $darkBlue !important;
+                                }
+                                g {
+                                    circle {
+                                        fill: $yellow !important;
+                                    }
+                                }
+                                path {
+                                    @include anima-slow;
+                                    fill: $darkBlue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .maps {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints,md)) {
+    .page_template_text {
+        .content_contact {
+            form {
+                .item_form {
+                    @include make-col(6);
+                    &:nth-child(6),
+                    &:nth-child(7) {
+                        @include make-col(12);
+                    }
+                    &:last-child {
+                        @include make-col(12);
+                    }
+                }
+            }
+        }
+    }
+}

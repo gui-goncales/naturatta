@@ -1,0 +1,365 @@
+.banner_desktop {
+    display: none !important;
+}
+
+.banner {
+    .item_banner {
+        display: flex !important;
+        flex-wrap: wrap;
+        height: 104vh;
+        h2 {
+            margin-top: 50px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.125em;
+            text-transform: uppercase;
+            color: $lightPink;
+            .laranja {
+                background: #a52f0a;
+                color: #fff;
+                padding: 10px 20px;
+            }
+            .yellow_lancamento {
+                background: $lightPink;
+                color: #f7d713;
+                padding: 10px 20px;
+            }
+        }
+        h3 {
+            font-size: 1.24em;
+            text-align: center;
+            margin-top: 55px;
+            font-weight: bold;
+            b {
+                color: $lightPink;
+            }
+            .yellow {
+                color: #f7d713;
+            }
+            span {
+                color: #fff;
+            }
+            span.yellow {
+                color: $lightPink;
+            }
+            .green {
+                color: $blue;
+            }
+        }
+        .image_product {
+            margin-top: 30px;
+        }
+        .btn_saiba_mais {
+            margin-top: 80px;
+            text-align: center;
+            a {
+                background: $lightPink;
+                text-decoration: none;
+                border-radius: 30px;
+                padding: 12px 25px;
+                font-weight: bold;
+                font-size: 0.775em;
+                text-transform: uppercase;
+                outline: 0;
+                color: #fff;
+                @include anima-slow;
+                &:hover {
+                    @include anima-slow;
+                    background: $blue;
+                }
+            }
+        }
+    }
+    .slick-arrow {
+        position: absolute;
+        top: 14rem;
+        z-index: 20;
+        cursor: pointer;
+        @include anima-slow;
+        svg {
+            width: 50px;
+            height: 50px;
+            path {
+                @include anima-slow;
+                fill: $blue;
+            }
+        }
+        &:hover {
+            @include anima-slow;
+            svg {
+                path {
+                    @include anima-slow;
+                    fill: $lightPink;
+                }
+            }
+        }
+    }
+    .arrowNext {
+        right: 0;
+        margin-top: 8px;
+    }
+    .arrowPrev {
+        left: 0;
+        transform: rotate(180deg);
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .banner_desktop {
+        display: block !important;
+    }
+    .banner_mobile {
+        display: none !important;
+    }
+    .banner {
+        .item_banner {
+            height: 85vh;
+            align-items: center;
+            .column {
+                // margin-left: percentage(.2/12);
+                margin-top: 50px;
+                align-self: flex-start;
+            }
+            h2 {
+                font-size: 1.45em;
+                text-align: left;
+                margin-left: 100px;
+            }
+            h3 {
+                margin-left: 100px;
+                text-align: left;
+            }
+            .btn_saiba_mais {
+                margin-top: 50px;
+                margin-left: 100px;
+                text-align: left;
+            }
+        }
+        .arrowNext {
+            right: 30px;
+        }
+        .arrowPrev {
+            left: 30px;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .banner {
+        .item_banner {
+            h2 {
+                margin-top: 20px;
+                margin-left: 180px;
+            }
+            h3 {
+                font-size: 1.45em;
+                margin-left: 180px;
+            }
+            .btn_saiba_mais {
+                margin-left: 180px;
+            }
+        }
+        .arrowNext {
+            right: 100px;
+        }
+        .arrowPrev {
+            left: 100px;
+        }
+    }
+}
+
+@include responsivo(1600, 4000) {
+    .banner {
+        .arrowNext {
+            right: 120px;
+        }
+        .arrowPrev {
+            left: 120px;
+        }
+        .item_banner {
+            height: 70vh;
+            .column {
+                margin-left: percentage(1/12);
+                &:first-child {
+                    @include make-col(4);
+                }
+            }
+            h3 {
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+.banner_home_mobile {
+    display: flex;
+}
+
+.banner_home_desktop {
+    display: none;
+}
+
+.banner_home .content_banner h2 {
+    margin-top: 50px;
+}
+
+.banner_home,
+.banner_distribuidor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 100vh;
+    .column {
+        margin: 0 auto;
+    }
+    .content_banner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 auto;
+        padding: 20px 0;
+        h2 {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.45em;
+            span {
+                color: $lightPink;
+            }
+        }
+        .texto {
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .clique_aqui {
+            margin-top: 10px;
+            a {
+                text-decoration: none;
+                font-weight: 550;
+                color: $lightPink;
+                @include anima-slow;
+                svg {
+                    width: 14px;
+                    height: 14px;
+                    margin-left: 5px;
+                    path {
+                        @include anima-slow;
+                        fill: $lightPink;
+                    }
+                }
+                &:hover {
+                    @include anima-slow;
+                    color: #fff;
+                    svg {
+                        path {
+                            @include anima-slow;
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner_distribuidor {
+    height: 100vh;
+    .content_banner {
+        align-items: center;
+        .title {
+            margin-bottom: 10px;
+            margin-top: 30px;
+        }
+        h2 {
+            color: $lightPink;
+            span {
+                color: $blue;
+            }
+        }
+        .texto {
+            color: $lightPink;
+            span {
+                color: $blue;
+            }
+        }
+        .clique_aqui {
+            a {
+                &:hover {
+                    color: $blue;
+                    svg {
+                        path {
+                            fill: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsivo(0, 374) {
+    .banner_home {
+        .content_banner {
+            h2 {}
+        }
+    }
+}
+
+@include responsivo(375, 424) {
+    .banner_home {
+        .content_banner {
+            h2 {}
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .banner_home_mobile {
+        display: none;
+    }
+    .banner_home_desktop {
+        display: flex;
+    }
+    .banner_home {
+        .content_banner {
+            h2 {
+                font-size: 2.2em;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .banner_home,
+    .banner_distribuidor {
+        height: 70vh;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .banner_home,
+    .banner_distribuidor {
+        height: 60vh;
+    }
+    .banner_distribuidor {
+        .content_banner {
+            h2 {
+                margin-top: -70px !important;
+                font-size: 2.8em !important;
+            }
+        }
+    }
+}
+
+@include responsivo(1920, 4000) {
+    .banner_home,
+    .banner_distribuidor {
+        height: 50vh;
+        .content_banner {
+            h2 {
+                font-size: 4.2em !important;
+            }
+        }
+    }
+}

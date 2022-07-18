@@ -1,0 +1,167 @@
+.receitas__section {
+    background: url("../img/bg_receitas.png") no-repeat top center;
+    background-size: cover;
+    padding: 80px 0;
+    .img_receita {
+        margin-bottom: 10px;
+    }
+    h2 {
+        margin-bottom: 10px;
+        text-align: center;
+        font-weight: bold;
+        color: $black;
+    }
+    .subtitle {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .item {
+        padding-bottom: 20px;
+        margin: 0 auto;
+        h1 {
+            color: $black;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 1.35em;
+            height: 50px;
+        }
+    }
+    .sliderReceitas {
+        .slick-arrow {
+            position: absolute;
+            top: 8rem;
+            z-index: 20;
+            cursor: pointer;
+            @include anima-slow;
+            svg {
+                width: 50px;
+                height: 50px;
+                path {
+                    @include anima-slow;
+                    fill: $blue;
+                }
+            }
+            &:hover {
+                @include anima-slow;
+                svg {
+                    path {
+                        @include anima-slow;
+                        fill: $lightPink;
+                    }
+                }
+            }
+        }
+        .arrowNext {
+            right: -10px;
+            top: 8.6rem;
+        }
+        .arrowPrev {
+            left: -10px;
+            transform: rotate(180deg);
+        }
+        video {
+            object-fit: cover;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .receitas__section {
+        .sliderReceitas {
+            .item {
+                margin-right: 20px;
+            }
+            .arrowNext {
+                right: -5px;
+            }
+            .arrowPrev {
+                left: -25px;
+            }
+        }
+    }
+}
+
+.all_receitas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 50px;
+    .item {
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+        h1 {
+            color: $black;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 1.25em;
+            height: 50px;
+        }
+        video {
+            object-fit: cover;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .all_receitas {
+        .item {
+            @include make-col(5.5);
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .all_receitas {
+        .item {
+            @include make-col(3.8);
+        }
+    }
+}
+
+.receitas__single {
+    .imagem_full {
+        margin-top: 40px;
+    }
+    h2 {
+        font-weight: bold;
+        color: $lightPink;
+    }
+    .texto_receita {
+        margin-top: 20px;
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    .video {
+        margin-top: 50px;
+        video {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .receitas__single {
+        .video {
+            iframe {
+                height: 350px;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .receitas__single {
+        .video {
+            iframe {
+                height: 450px;
+            }
+        }
+    }
+}

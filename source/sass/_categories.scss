@@ -1,0 +1,74 @@
+.popular_category {
+  h2 {
+    padding: 50px 0 20px;
+    padding-left: 5px !important;
+    font-weight: bold;
+    font-size: 1.45em;
+  }
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+
+    .item {
+      height: 250px;
+      h3 {
+        font-weight: bold;
+        font-size: 0.875em;
+        color: #fff;
+        padding: 20px 10px 0;
+        a {
+          text-decoration: none;
+          color: #fff;
+          @include anima-slow;
+          svg {
+            width: 14px;
+            height: 14px;
+            margin-top: -3px;
+            path {
+              @include anima-slow;
+              fill: #fff;
+            }
+          }
+          &:hover {
+            @include anima-slow;
+            color: $blue;
+            svg {
+              path {
+                @include anima-slow;
+                fill: $blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: map-get($grid-breakpoints,lg)) {
+  .popular_category {
+    .categories {
+      .item {
+        width: 200px !important;
+        height: 200px;
+        margin-left: 30px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: map-get($grid-breakpoints,xl)) {
+  .popular_category {
+    .categories {
+      .item {
+        width: 250px !important;
+        height: 250px;
+      }
+    }
+  }
+}

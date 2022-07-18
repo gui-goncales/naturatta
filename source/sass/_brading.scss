@@ -1,0 +1,29 @@
+.bradings {
+  background: #f2f2f2;
+  margin-top: 50px;
+  padding: 50px 0;
+  h2 {
+    color: $darkBlue;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.45em;
+  }
+
+  .all_partners {
+    margin-top: 30px;
+    .item {
+      text-align: center;
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints,md)) {
+  .bradings {
+    .all_partners {
+      margin-top: 0;
+    }
+  }
+}

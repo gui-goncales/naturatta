@@ -1,0 +1,94 @@
+.btn_receita {
+    text-align: center;
+    a {
+        background: $blue;
+        font-weight: bold;
+        cursor: pointer;
+        color: #fff;
+        width: 100%;
+        border-radius: 30px;
+        padding: 10px 15px;
+        outline: 0;
+        text-decoration: none;
+        @include anima-slow;
+        &:hover {
+            @include anima-slow;
+            background: #00b548;
+        }
+    }
+}
+
+.wp-pagenavi {
+    .pages {
+        font-weight: bold;
+        color: $blue;
+        margin: 0 10px;
+    }
+
+    .current {
+        margin: 0 10px;
+        font-weight: bold;
+        color: $lightPink;
+    }
+
+    .page {
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 10px;
+        color: $blue;
+        &:hover {
+            color: $lightPink;
+        }
+    }
+
+    .nextpostslink, .previouspostslink {
+        text-decoration: none;
+        margin: 0 10px;
+        color: $blue;
+        &:hover {
+            color: $lightPink;
+        }
+    }
+}
+
+.btn_buy {
+    margin: 0 auto;
+    margin-top: 20px;
+    align-self: flex-end;
+    button {
+      border: none;
+      background: $blue;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+      width: 100%;
+      border-radius: 30px;
+      padding: 10px 15px;
+      outline: 0;
+      @include anima-slow;
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      svg {
+        position: absolute;
+        top: 5px;
+        left: 20px;
+        width: 35px;
+        height: 35px;
+        @include anima-slow;
+        path {
+          fill: white;
+        }
+      }
+      &:hover {
+        background: #00b548;
+        @include anima-fast;
+        svg {
+          @include anima-fast;
+          right: 20px;
+          left: auto;
+        }
+      }
+    }
+  }

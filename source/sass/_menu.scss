@@ -1,0 +1,148 @@
+.menu_mobile {
+    .menu-toggle {
+        width: 40px;
+        height: 5px;
+        position: absolute;
+        top: 5px;
+        right: percentage(0.5/12);
+        cursor: pointer;
+        z-index: 4;
+        @include anima-fast;
+
+        &.on {
+            position: fixed;
+            z-index: 2000;
+            top: 20px;
+            right: percentage(0.5/12);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #fff;
+            @include anima-fast;
+            .one {
+                transform: rotate(46deg);
+                height: 2px;
+                width: 20px;
+                background: $blue;
+                margin-top: 14px;
+            }
+
+            .two {
+                opacity: 0;
+            }
+
+            .three {
+                transform: rotate(-46deg);
+                margin-top: -18px;
+                height: 2px;
+                width: 20px;
+                background: $blue;
+            }
+
+            .titulo_menu {
+                display: none;
+            }
+        }
+
+        .titulo_menu {
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 0.775em;
+        }
+    }
+
+    .one,
+    .two,
+    .three {
+        width: 100%;
+        height: 4px;
+        background: #fff;
+        margin: 6px auto;
+        border-radius: 4px;
+        backface-visibility: hidden;
+        @include anima-slow;
+    }
+
+    nav {
+        background-image: linear-gradient(to bottom right, $blue, $blue);
+        font-family: "Montserrat", sans-serif;
+        top: 0;
+        position: fixed;
+        z-index: 30;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+        ul {
+            margin: 0;
+            padding: 50px 0;
+            list-style: none;
+            margin: 0 auto;
+            text-align: center;
+            @extend .col-12;
+            width: 100vw;
+            overflow-y: auto;
+            right: 0;
+            top: 0;
+            @include anima-slow;
+
+            a {
+                margin-bottom: 20px;
+                font-weight: bold;
+                @include anima-slow;
+                text-decoration: none;
+                color: white;
+                font-size: 1.5em;
+                line-height: 1.5;
+                width: 100%;
+                display: block;
+                &:hover {
+                    color: #fff;
+                }
+
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    margin-top: -6px;
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+
+        .redes_sociais {
+            @extend .col-12;
+            display: flex;
+            justify-content: center;
+            margin-top: -30px;
+            svg {
+                width: 37px;
+                height: 37px;
+                margin-left: 10px;
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+
+        .menu-section {
+            &.on {
+                z-index: 10;
+                width: 100%;
+                height: 100%;
+                display: block;
+                background-color: rgba(0, 0, 0, 0.5);
+                position: absolute;
+            }
+        }
+
+        &.hidden {
+            display: none;
+            @include anima-slow;
+        }
+    }
+}

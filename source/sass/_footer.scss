@@ -1,0 +1,307 @@
+.newsletter {
+    padding: 0;
+    background: $blue;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px 0;
+    .row {
+        align-items: center;
+    }
+    h2 {
+        font-size: 1.45em;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    .formulario {
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .item {
+            input {
+                border: 0;
+                outline: 0;
+                padding: 10px 15px;
+                width: 100%;
+            }
+            &:nth-child(3) {
+                margin: 0 auto;
+            }
+            input[type="submit"] {
+                background: transparent;
+                border: 1px solid #fff;
+                color: #fff;
+                cursor: pointer;
+                @include anima-slow;
+                margin-top: 20px;
+                &:hover {
+                    @include anima-slow;
+                    color: $blue;
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .newsletter {
+        padding: 30px 30px;
+        h2 {
+            font-size: 1.65em;
+            margin-bottom: 0;
+        }
+        .formulario {
+            form {
+                .item {
+                    @include make-col(4);
+                    &:nth-child(2) {
+                        @include make-col(8);
+                    }
+                    input[type="submit"] {
+                        margin-top: 0;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsivo(1920, 2600) {
+    .newsletter {}
+}
+
+.footer {
+    background: $darkBlue;
+    .institucional {
+        margin-top: 250px;
+    }
+    .departamentos,
+    .atendimento,
+    .forma_pagamento {
+        margin-top: 50px;
+    }
+    .institucional,
+    .departamentos,
+    .atendimento,
+    .forma_pagamento {
+        h2 {
+            color: #fff;
+            font-size: 1.25em;
+            font-weight: bold;
+        }
+        .marginTopH2 {
+            margin-top: 40px;
+        }
+        ul {
+            margin-top: 20px;
+            li {
+                margin-bottom: 5px;
+                color: #fff;
+                a {
+                    text-decoration: none;
+                    @include anima-slow;
+                    color: #fff;
+                    &:hover {
+                        @include anima-slow;
+                        color: $blue;
+                    }
+                }
+                svg {
+                    position: absolute;
+                    margin-top: 5px;
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 5px;
+                    path {
+                        fill: $blue;
+                    }
+                }
+                span {
+                    margin-left: 25px;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+    .all_rights {
+        margin: 50px 0 20px;
+        color: #fff;
+        text-align: center;
+        &:before {
+            content: "";
+            display: block;
+            background: #013a28;
+            width: 100%;
+            height: 1px;
+            margin-bottom: 20px;
+        }
+        red {
+            margin: 0 5px;
+            color: $red;
+        }
+    }
+    .atendimento {
+        ul {
+            li {
+                margin-bottom: 15px;
+            }
+        }
+        .btns {
+            padding: 0;
+            ul {
+                li {
+                    a {
+                        svg {
+                            position: absolute;
+                            left: 10px;
+                            margin-top: -4px;
+                            width: 30px;
+                            height: 30px;
+                            path {
+                                fill: #fff;
+                            }
+                        }
+                        span {
+                            margin-left: 36px;
+                        }
+                    }
+                }
+                .whatsapp {
+                    margin-top: 40px;
+                    a {
+                        padding: 10px;
+                        border-radius: 30px;
+                        background: #10bd3d;
+                        font-size: 0.875em;
+                        @include anima-slow;
+                        &:hover {
+                            background: $yelllow;
+                            color: $darkBlue;
+                            @include anima-slow;
+                            svg {
+                                margin-right: 5px;
+                                path {
+                                    @include anima-slow;
+                                    fill: $darkBlue;
+                                }
+                            }
+                        }
+                    }
+                }
+                .atendimento_online {
+                    margin-top: 30px;
+                    a {
+                        padding: 10px;
+                        border-radius: 30px;
+                        background: $blue;
+                        font-size: 0.875em;
+                        @include anima-slow;
+                        svg {
+                            margin-right: 5px;
+                            circle {
+                                fill: #fff !important;
+                            }
+                            g {
+                                circle {
+                                    fill: $blue !important;
+                                }
+                            }
+                        }
+                        &:hover {
+                            background: $yelllow;
+                            color: $darkBlue;
+                            @include anima-slow;
+                            svg {
+                                circle {
+                                    fill: $darkBlue !important;
+                                }
+                                g {
+                                    circle {
+                                        fill: $yellow !important;
+                                    }
+                                }
+                                path {
+                                    @include anima-slow;
+                                    fill: $darkBlue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .footer {
+        .departamentos {
+            margin-top: 250px;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .footer {
+        .institucional,
+        .departamentos,
+        .atendimento,
+        .forma_pagamento {
+            margin-top: 100px;
+        }
+        .departamentos,
+        .atendimento,
+        .forma_pagamento {
+            margin-left: percentage(0.5/12);
+        }
+    }
+}
+
+.footer_blog {
+    .institucional,
+    .departamentos,
+    .atendimento,
+    .forma_pagamento {
+        margin-top: 50px;
+    }
+}
+
+.mesange_footer {
+    @extend .col-12;
+    background: #f2f2f2;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.875em;
+    color: $gray;
+    a {
+        text-decoration: none;
+        color: $blue;
+        @include anima-slow;
+        &:hover {
+            @include anima-slow;
+            color: $yellow;
+        }
+    }
+}
+
+.footer_login {
+    padding: 30px 0;
+    line-height: 1.8;
+    a {
+        text-decoration: none;
+        color: $blue;
+        margin: 0 5px;
+        @include anima-slow;
+        &:hover {
+            @include anima-slow;
+            color: $yellow;
+        }
+    }
+}

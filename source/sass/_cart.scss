@@ -1,0 +1,233 @@
+.page_carrinho {
+  padding: 50px 0;
+ 
+  h2 {
+    font-family: "TTNorms Bold", sans-serif;
+    font-size: 1.65em;
+    font-weight: bold;
+    color: $black;
+    text-align: center;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+  }
+  .icon {
+    text-align: center;
+    margin-bottom: 20px;
+    svg {
+      width: 120px;
+      height: 120px;
+      path {
+        fill: $blue;
+      }
+    }
+  }
+
+ 
+  
+  .woocommerce-message {
+    display: none;
+    color: $gray;
+    a {
+      text-decoration: none;
+      color: $blue;
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+
+  .btn_checkout {
+    text-align: center;
+    margin-top: 50px;
+    a {
+      background: $blue;
+      text-decoration: none;
+      border: 0;
+      border-radius: 30px;
+      cursor: pointer;
+      outline: 0;
+      color: #fff;
+      font-weight: bold;
+      padding: 10px 65px;
+      @include anima-slow;
+      &:hover {
+        background: #00b548;
+        @include anima-slow;
+      }
+    }
+
+ 
+  }
+  .woocommerce {
+    @extend .col-12;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+   
+    .cart_totals {
+      margin-bottom: 30px;
+      h2 {
+        display: none;
+      }
+      table {
+        td {
+          padding: 0;
+        }
+      }
+
+      .cart-subtotal {
+        display: none;
+      }
+
+      .order-total {
+        font-family: "TTNorms Bold", sans-serif;
+        font-size: 1.25em;
+        color: #b9b9b9;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        &:before {
+          content: "Valor ";
+          display: inline;
+          margin-right: 4px;
+        }
+
+        th {
+          &:after {
+            content: ": ";
+            display: inline;
+          }
+        }
+        .amount {
+          color: $blue;
+          margin-left: 4px;
+        }
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      .wc-proceed-to-checkout {
+        display: none;
+      }
+    }
+
+    table {
+      thead {
+        display: none;
+      }
+
+      tbody {
+        .cart_item {
+          border-top: 3px solid #ecebeb;
+          margin-top: 30px;
+        }
+        .actions {
+          text-align: center;
+        }
+        td {
+          padding: 20px;
+          img {
+            width: 150px;
+            height: 150px;
+          }
+
+          .coupon {
+            display: none;
+          }
+          [name="update_cart"] {
+            background: transparent;
+            margin: 0 auto;
+            border: 0;
+            color: $blue;
+            font-weight: bold;
+            cursor: pointer;
+            outline: 0;
+            @include anima-slow;
+            &:hover {
+              @include anima-slow;
+              color: #00b548;
+            }
+          }
+        }
+        .product-remove {
+          a {
+            @include anima-slow;
+            font-size: 1.25em;
+            color: $black;
+            text-decoration: none;
+            &:hover {
+              @include anima-slow;
+              color: $red;
+            }
+          }
+        }
+        .product-name {
+          margin-left: 10px;
+          a {
+            text-decoration: none;
+            font-weight: bold;
+            color: $black;
+            &:hover {
+              color: #00b548;
+            }
+          }
+        }
+        .product-subtotal {
+          display: none;
+        }
+
+        .product-price {
+          font-family: "TTNorms Bold", sans-serif;
+          font-size: 1.25em;
+          font-weight: bold;
+          color: $blue;
+        }
+
+        .quantity {
+          margin-top: 20px;
+          margin-bottom: 30px;
+          padding: 0px 10px;
+          label {
+            display: none;
+          }
+        }
+
+        .qty {
+          background: none;
+          border: 1px solid #b8b8b8;
+          border-radius: 5px;
+          outline: 0;
+          width: 70%;
+          padding: 5px 2px;
+          color: $black;
+          text-align: center;
+        }
+
+        .screen-reader-text {
+          display: none;
+        }
+      }
+    }
+
+    .cart-empty {
+      @extend .col-12;
+      margin-bottom: 30px;
+      color: $gray;
+      text-align: center;
+    }
+
+    .return-to-shop {
+      @extend .col-12;
+      position: absolute;
+      margin: 0 auto;
+      margin-top: 30px;
+      text-align: center;
+      a {
+        color: $blue;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+}

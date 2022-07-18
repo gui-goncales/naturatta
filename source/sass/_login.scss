@@ -1,0 +1,167 @@
+.pageLogin {
+    padding: 80px 0;
+    background: #f2f2f2;
+
+    .column {
+        background: #fff;
+        padding: 30px 10px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+        h2 {
+            font-size: 1.45em;
+            text-align: center;
+            margin-bottom: 30px;
+            align-self: flex-start;
+        }
+
+        .form-row {
+            margin-bottom: 15px;
+        }
+
+        input,
+        select,
+        textarea {
+            border: 1px solid #dbdbdb;
+            padding: 10px 15px;
+            outline: 0;
+            font-family: "Open sans", sans-serif;
+            resize: none;
+            width: 100%;
+        }
+
+        label {
+            @extend .col-8;
+        }
+
+        .form-row-first,
+        .form-row-last {
+            label {
+                display: none;
+            }
+        }
+
+        .woocommerce-privacy-policy-text {
+            display: none;
+        }
+
+        .lost_password {
+            position: absolute;
+            margin-top: -110px;
+            right: 15px;
+            a {
+                text-decoration: none;
+                color: $blue;
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        }
+
+        [type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            margin-top: -10px;
+        }
+
+        .woocommerce-form-login__submit,
+        .woocommerce-Button {
+            background: $blue;
+            border: 0;
+            width: 180px;
+            padding: 10px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 30px;
+            outline: 0;
+            margin: 0 auto;
+            margin-top: 20px;
+            @include anima-slow;
+            &:hover {
+                @include anima-slow;
+                background: #00b548;
+            }
+        }
+    }
+    
+    .column_reset_password {
+        input {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints,md)) {
+    .pageLogin {
+        height: 80vh;
+        .column {
+            @include make-col(5.5);
+            padding: 30px 30px;
+            &:last-child {
+                margin-left: percentage(0.3/12);
+            }
+        }
+
+        .column_reset_password {
+            @include make-col(8);
+            margin: 0 auto;
+            &:last-child {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.login {
+    .lost_reset_password {
+        padding: 80px 0;
+        p {
+            color: $gray;
+        }
+        .form-row-first {
+            margin-top: 20px;
+        }
+
+        input,
+        select,
+        textarea {
+            border: 1px solid #dbdbdb;
+            padding: 10px 15px;
+            outline: 0;
+            font-family: "Open sans", sans-serif;
+            resize: none;
+            width: 90%;
+        }
+
+        button {
+            background: $blue;
+            border: 0;
+            width: 180px;
+            padding: 10px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 30px;
+            outline: 0;
+            margin: 0 auto;
+            margin-top: 20px;
+            @include anima-slow;
+            &:hover {
+                @include anima-slow;
+                background: #00b548;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints,md)) {
+    .login {
+        .lost_reset_password {
+            @include make-col(9);
+            margin: 0 auto;
+        }
+    }
+}

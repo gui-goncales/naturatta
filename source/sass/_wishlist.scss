@@ -1,0 +1,146 @@
+.wishlist {
+    padding: 80px 0;
+    .wishlist-title {
+        text-align: center;
+        h2 {
+            color: $black;
+            margin-bottom: 20px;
+        }
+    }
+
+    .hidden-title-form {
+        text-align: center;
+        margin: 50px 0 80px;
+        input,
+        select,
+        textarea {
+            border: 1px solid #dbdbdb;
+            padding: 5px 15px;
+            outline: 0;
+            font-family: "Open sans", sans-serif;
+            resize: none;
+        }
+        [type="submit"] {
+            width: 200px;
+            background: $blue;
+            border: 0;
+            border-radius: 30px;
+            cursor: pointer;
+            outline: 0;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 45px;
+            @include anima-slow;
+            &:hover {
+                background: #00b548;
+                @include anima-slow;
+            }
+        }
+    }
+    .button {
+        display: none;
+    }
+
+    .yith_wcwl_wishlist_footer {
+        display: none;
+    }
+
+    table {
+        thead {
+            display: none;
+        }
+
+        tbody {
+            .cart_item {
+                border-top: 3px solid #ecebeb;
+                margin-top: 30px;
+                @include anima-slow;
+            }
+            .actions {
+                text-align: center;
+            }
+            td {
+                padding: 20px;
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+
+                .coupon {
+                    display: none;
+                }
+                [name="update_cart"] {
+                    background: transparent;
+                    margin: 0 auto;
+                    border: 0;
+                    color: $blue;
+                    font-weight: bold;
+                    cursor: pointer;
+                    outline: 0;
+                    @include anima-slow;
+                    &:hover {
+                        @include anima-slow;
+                        color: #00b548;
+                    }
+                }
+            }
+            .product-remove {
+                a {
+                    @include anima-slow;
+                    font-size: 1.25em;
+                    color: $black;
+                    text-decoration: none;
+                    &:hover {
+                        @include anima-slow;
+                        color: $red;
+                    }
+                }
+            }
+            .product-name {
+                margin-left: 10px;
+                a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: $black;
+                    &:hover {
+                        color: #00b548;
+                    }
+                }
+            }
+            .product-subtotal {
+                display: none;
+            }
+
+            .product-price {
+                font-family: "TTNorms Bold", sans-serif;
+                font-size: 1.25em;
+                font-weight: bold;
+                color: $blue;
+            }
+
+            .quantity {
+                margin-top: 20px;
+                margin-bottom: 30px;
+                padding: 0px 10px;
+                label {
+                    display: none;
+                }
+            }
+
+            .qty {
+                background: none;
+                border: 1px solid #b8b8b8;
+                border-radius: 5px;
+                outline: 0;
+                width: 70%;
+                padding: 5px 2px;
+                color: $black;
+                text-align: center;
+            }
+
+            .screen-reader-text {
+                display: none;
+            }
+        }
+    }
+}

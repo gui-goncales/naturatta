@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Pluto";
+    src: url(../fonts/PLUTOREGULAR.TTF);
+}
+
+@font-face {
+    font-family: "Pluto Bold";
+    src: url(../fonts/PLUTOBOLD.TTF);
+}
+
+.woocommerce-checkout .wpmc-step-item {
+    display: none
+}
+
+.woocommerce-checkout .active {
+    display: block
+}
+
+body.woocommerce-checkout.has-checkout-header .fc-content {
+    font-family: "Pluto", sans-serif !important;
+}

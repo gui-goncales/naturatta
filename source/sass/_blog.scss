@@ -1,0 +1,115 @@
+.page_blog {
+    .content_columns {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 0;
+        .column {
+            .item_blog {
+                margin-bottom: 80px;
+                .img_blog {
+                    margin-bottom: 10px;
+                }
+
+                .infos_post {
+                    margin-top: 20px;
+                    color: $gray;
+                    span {
+                        color: $blue;
+                        font-weight: 900;
+                    }
+                }
+
+                .title_blog {
+                    font-size: 1.65em;
+                    font-weight: bold;
+                    color: $darkBlue;
+                    margin-top: 20px; 
+                }
+
+                .description_blog {
+                    text-align: justify;
+                    color: $gray;
+                    margin-top: 15px; 
+                }
+
+                .texto_blog {
+                    text-align: justify;
+                    color: $gray;
+                    margin-top: 15px; 
+                    p {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .leiaMais {
+                    margin-top: 40px;
+                   a {
+                    background: $blue;
+                    text-decoration: none;
+                    border: 0;
+                    border-radius: 30px;
+                    cursor: pointer;
+                    outline: 0;
+                    color: #fff;
+                    font-weight: bold;
+                    padding: 12px 45px;
+                    @include anima-slow;
+                    &:hover {
+                      background: #00b548;
+                      @include anima-slow;
+                    }
+                   }
+                }
+            }
+
+            .searchBlog {
+                background: $blue;
+                padding: 20px 10px;
+                input {
+                    background: #fff;
+                    border: 0;
+                    padding: 10px 15px;
+                    outline: 0;
+                    width: 100%;
+                }
+                .btnEnviar {
+                    position: absolute;
+                    right: percentage(.5/12);
+                    top: 10px;
+                    background: transparent;
+                    width: 50px;
+                    color: $blue;
+                    font-size: 1.95em;
+                    transform: rotate(-40deg);
+                    cursor: pointer;
+                }
+            }
+
+            .categorias {
+                background: #f2f2f2;
+                padding: 20px 15px;
+                margin-top: 30px;
+                h2 {
+                    font-size: 1.65em;
+                    color: $black;
+                    margin-bottom: 30px;
+                }
+                ul {
+                    list-style: circle;
+                    li {
+                        margin-bottom: 10px;
+                        a {
+                            text-decoration: none;
+                            color: $gray;
+                            @include anima-slow;
+                            &:hover {
+                                @include anima-slow;
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

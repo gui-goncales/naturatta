@@ -1,0 +1,186 @@
+.order_details_modal {
+    display: none;
+    .conteudo_modal {
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 5px;
+        padding: 30px 10px;
+        .select_order {
+            font-size: 1.25em;
+            font-weight: bold;
+            color: $black;
+            margin-bottom: 20px;
+        }
+        .nav_areas {
+            overflow-y: scroll;
+            height: 60vh;
+        }
+        .order_item {
+            margin-bottom: 20px;
+            .order_id_modal {
+                @extend .col-12;
+                background: #f2f2f2;
+                padding: 20px 10px;
+                cursor: pointer;
+                display: flex;
+                flex-wrap: wrap;
+                color: $gray;
+                .showmore {
+                    margin-right: 25px;
+                    @include anima-slow;
+
+                    &:before {
+                        content: "+";
+                        display: inline-block;
+                        color: $blue;
+                        font-size: 2.2em;
+                    }
+                }
+                .activeshow {
+                    @include anima-slow;
+                    margin-right: 30px;
+                    &:before {
+                        content: "-";
+                        display: inline-block;
+                        color: $blue;
+                        font-size: 2.2em;
+                    }
+                }
+                .ref_id_order {
+                    position: relative;
+                    color: $black;
+                    font-weight: 550;
+                }
+                .clique_btn {
+                    position: absolute;
+                    left: 7%;
+                    margin-top: 25px;
+                    font-size: 0.875em;
+                } 
+                span {
+                    position: absolute;
+                    right: 10px;
+                    border-radius: 5px;
+                    color: #fff;
+                    padding: 5px 10px;
+                    margin-top: 15px;
+                }
+                #bgRed {
+                    background: #ff5c5c;
+                }
+                #bgYellow {
+                    background: #d6b141;
+                }
+                #bgGreen {
+                    background: #42b16e;
+                }
+                #bgGray {
+                    background: $gray;
+                }
+            }
+            .conteudo {
+                display: none;
+                .infos_order {
+                    display: flex;
+                    flex-wrap: wrap;
+                    font-size: 0.875em;
+                    margin-bottom: 20px;
+                    color: $black;
+                    font-weight: 550;
+                    &:after {
+                        content: "";
+                        display: block;
+                        background: #dbdbdb;
+                        width: 98%;
+                        height: 1px;
+                        margin: 0 auto;
+                        margin-top: 20px;
+                    }
+
+                    span {
+                        color: $gray;
+                        font-weight: 500;
+                    }
+                }
+
+                .produtos {
+                    h4 {
+                        font-size: 1.125em;
+                        @extend .col-12;
+                        margin-top: 40px;
+                        font-size: 1.125em;
+                        font-weight: 550;
+                    }
+
+                    .item_produto {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        color: $gray;
+                        b {
+                            color: $black;
+                        }
+                    }
+                }
+
+                h3 {
+                    font-size: 1.125em;
+                    @extend .col-12;
+                    margin-top: 40px;
+                    margin-bottom: 15px;
+                    font-size: 1.125em;
+                    font-weight: 550;
+                }
+            }
+
+            .active {
+                display: block;
+            }
+        }
+        h2 {
+            font-size: 1.45em;
+            font-weight: 550;
+            color: $black;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: $gray;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+        .close {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            svg {
+                width: 15px;
+                height: 15px;
+                path {
+                    fill: $blue;
+                }
+            }
+            &:hover {
+                svg {
+                    path {
+                        fill: $red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active_modal {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
